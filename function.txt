@@ -1,0 +1,30 @@
+fun main(args: Array<String>) { 
+fun add(i: Int, j:Int): Int 
+{ 
+return i+j 
+} 
+val res = add(2, 3) 
+println("Addition = $res") 
+fun sub(i: Int, j: Int=3): Int 
+{ 
+return i - j 
+} 
+println("Substraction = " + sub(5)) 
+fun multiplyNums(vararg numArgs: Int): Int 
+{ 
+var result = 1 
+for (numArg in numArgs) 
+{ 
+result *= numArg 
+} 
+return result 
+} 
+val value = multiplyNums(2,4) 
+println("Multiplication = $value") 
+} 
+
+Output:
+
+Addition = 5
+Substraction = 2
+Multiplication = 8

@@ -1,0 +1,61 @@
+ 
+import java.util.TreeSet 
+fun main(args: Array<String>) { 
+        var setOfFruits = setOf("Apple", "Pineapple", "Grapes") 
+        println(setOfFruits) 
+ 
+        //HashSet 
+        var planetshset =  HashSet<String>() 
+ 
+        planetshset.addAll(listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter")) 
+        println("Hash Set = $planetshset") 
+ 
+        println("============== Contains Check ================") 
+        println("Does it contain earth? " + planetshset.contains("Earth")) 
+        println("============== Size check ================") 
+        println("Count of elements in Set " + planetshset.size) 
+ 
+        var planetsTwo = HashSet<String>(); 
+        planetsTwo.addAll(listOf("Mars", "Jupiter", "Neptune", "Venus")) 
+ 
+        // Perform intersection using retainAll method. 
+        planetshset.retainAll(planetsTwo) 
+         println("Planet is $planetshset") 
+ 
+        //LinkedHashSet 
+        var planetslhset =  LinkedHashSet<String>() 
+        planetslhset.addAll(listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter")) 
+        println("Linked Hash Set = $planetslhset") 
+        planetslhset.add("Neptune") 
+        println("============== After add Linked HashSet ================") 
+        println("After Linked Hash Set = $planetslhset") 
+ 
+        //TreeSet 
+        var planetstset =  TreeSet<String>() 
+        planetstset.addAll(listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter")) 
+        println("Tree Set = $planetstset") 
+        planetstset.add("Neptune") 
+        println("============== After add TreeSet ================") 
+        println("After Tree Set = $planetstset") 
+        planetstset.clear() 
+println("============== After clear TreeSet ================") 
+println("Planets isEmpty = " + planetstset.isEmpty()) 
+}
+
+Output:
+
+[Apple, Pineapple, Grapes]
+Hash Set = [Earth, Mars, Jupiter, Venus, Mercury]
+============== Contains Check ================
+Does it contain earth? true
+============== Size check ================
+Count of elements in Set 5
+Planet is [Mars, Jupiter, Venus]
+Linked Hash Set = [Mercury, Venus, Earth, Mars, Jupiter]
+============== After add Linked HashSet ================
+After Linked Hash Set = [Mercury, Venus, Earth, Mars, Jupiter, Neptune]
+Tree Set = [Earth, Jupiter, Mars, Mercury, Venus]
+============== After add TreeSet ================
+After Tree Set = [Earth, Jupiter, Mars, Mercury, Neptune, Venus]
+============== After clear TreeSet ================
+Planets isEmpty = true

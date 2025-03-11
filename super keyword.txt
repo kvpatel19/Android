@@ -1,0 +1,41 @@
+    //super keyword 
+    open class Bird { 
+        open var color = "Black" 
+        open fun fly() { 
+            println("Bird is flying...") 
+        } 
+    } 
+    class Parrot: Bird() { 
+        override var color = "Green" 
+        override fun fly() { 
+            super.fly() 
+            println("Parrot is flying...") 
+ 
+        } 
+    } 
+ 
+    //this keyword 
+    class Counter { 
+        var count = 0 
+ 
+        fun incrementCount() { 
+            this.count += 2 
+        } 
+    } 
+ 
+  fun main(){ 
+        val p = Parrot() 
+        p.fly() 
+        println(p.color) 
+ 
+        val c = Counter() 
+        c.incrementCount() 
+        println("Final count = ${c.count}") 
+}
+
+Output:
+
+Bird is flying...
+Parrot is flying...
+Green
+Final count = 2

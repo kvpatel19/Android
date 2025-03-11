@@ -1,0 +1,28 @@
+//abstract class 
+abstract class Employee(val name: String,val experience: Int) {   // Non-Abstract 
+// Property 
+// Abstract Methods (Must be implemented by Subclasses) 
+abstract fun dateOfBirth(date:String) 
+// Non-Abstract Method 
+fun employeeDetails() { 
+println("Name of the employee: $name") 
+println("Experience in years: $experience") 
+} 
+} 
+// derived class 
+class Engineer(name: String,experience: Int) : Employee(name,experience) { 
+override fun dateOfBirth(date:String){ 
+println("Date of Birth is: $date") 
+} 
+} 
+fun main(args: Array<String>) { 
+val eng = Engineer("Bhavisha",5) 
+eng.employeeDetails() 
+eng.dateOfBirth("02 December 1994") 
+} 
+
+Output:
+
+Name of the employee: Bhavisha
+Experience in years: 5
+Date of Birth is: 02 December 1994

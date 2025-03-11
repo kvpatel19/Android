@@ -1,0 +1,70 @@
+import java.util.Stack 
+fun main(args: Array<String>) { 
+var planets =  Stack<String>() 
+planets.addAll(listOf("Mercury", "Venus", "Earth", "Jupiter")) 
+println(planets) 
+planets.push("Pluto") 
+println("\nPush Planet = $planets") 
+var poppedPlanet = planets.pop() 
+println("\nPopped Planet = $poppedPlanet") 
+println("\nList of Planets after pop = $planets") 
+var peekPlanet = planets.peek() 
+println("\nPeek Planet = $peekPlanet") 
+println("\nList of Planets after peek = $planets ") 
+println("Search for Earth = " + planets.search("Earth")) 
+println("Search for Pluto = " + planets.search("Pluto")) 
+ 
+ 
+        println("Stack capacity = " + planets.capacity()) 
+ 
+        var firstPlanet = planets.firstElement() 
+        println("First planet = $firstPlanet") 
+ 
+        var lastPlanet = planets.lastElement() 
+        println("First planet = $lastPlanet") 
+} 
+ import java.util.Stack 
+fun main(args: Array<String>) { 
+var planets =  Stack<String>() 
+planets.addAll(listOf("Mercury", "Venus", "Earth", "Jupiter")) 
+println(planets) 
+planets.push("Pluto") 
+println("\nPush Planet = $planets") 
+var poppedPlanet = planets.pop() 
+println("\nPopped Planet = $poppedPlanet") 
+println("\nList of Planets after pop = $planets") 
+var peekPlanet = planets.peek() 
+println("\nPeek Planet = $peekPlanet") 
+println("\nList of Planets after peek = $planets ") 
+println("Search for Earth = " + planets.search("Earth")) 
+println("Search for Pluto = " + planets.search("Pluto")) 
+ 
+ 
+        println("Stack capacity = " + planets.capacity()) 
+ 
+        var firstPlanet = planets.firstElement() 
+        println("First planet = $firstPlanet") 
+ 
+        var lastPlanet = planets.lastElement() 
+        println("First planet = $lastPlanet") 
+} 
+ 
+
+Output:
+
+[Mercury, Venus, Earth, Jupiter]
+
+Push Planet = [Mercury, Venus, Earth, Jupiter, Pluto]
+
+Popped Planet = Pluto
+
+List of Planets after pop = [Mercury, Venus, Earth, Jupiter]
+
+Peek Planet = Jupiter
+
+List of Planets after peek = [Mercury, Venus, Earth, Jupiter] 
+Search for Earth = 2
+Search for Pluto = -1
+Stack capacity = 10
+First planet = Mercury
+First planet = Jupiter

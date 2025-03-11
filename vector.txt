@@ -1,0 +1,30 @@
+import java.util.Vector 
+fun main(args: Array<String>) { 
+var planets =  Vector<String>(); 
+planets.addAll(listOf("Mercury", "Venus", "Earth", "Pluto")) 
+println("Planets = $planets") 
+planets.addAll(listOf("Mercury", "Venus", "Earth", "Pluto")) 
+planets.addElement("Sirius A3") 
+println("Vector = $planets") 
+planets.add(2, "Jupiter") 
+for(planet in planets) 
+{ 
+println(planet) 
+} 
+}
+
+
+Output:
+
+Planets = [Mercury, Venus, Earth, Pluto]
+Vector = [Mercury, Venus, Earth, Pluto, Mercury, Venus, Earth, Pluto, Sirius A3]
+Mercury
+Venus
+Jupiter
+Earth
+Pluto
+Mercury
+Venus
+Earth
+Pluto
+Sirius A3

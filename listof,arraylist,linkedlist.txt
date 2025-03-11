@@ -1,0 +1,76 @@
+import java.util.LinkedList 
+fun main(args: Array<String>) { 
+println("--- List ---") 
+var listOfPlanets = listOf("Mercury", "Venus", "Earth") 
+println(listOfPlanets.count()) 
+for(planet in listOfPlanets) 
+println(planet) 
+//ArrayList 
+println("--- ArrayList Data ---") 
+var planets = arrayListOf<String>("Mercury", "Venus", "Earth", "Pluto") 
+planets.add(2, "Jupiter") 
+planets.addAll(listOf("Jupiter", "Saturn")) 
+if(planets.contains("Pluto")) 
+println("Pluto is a Planet!") 
+else 
+println("Pluto is NOT a Planet!") 
+planets.removeAt(2) 
+planets.remove("Pluto") 
+planets.removeAll(listOf("Earth", "Pluto")) 
+var planets2 = arrayListOf<String>("Mercury", "Venus", "Earth", "Earth", "Venus", 
+"Pluto") 
+var uniquePlanets = planets2.distinct() 
+println(uniquePlanets) 
+var numbers = arrayListOf<Int>(21, 44, 99, 74, 33) 
+var maxValue = numbers.max() 
+var minValue = numbers.min() 
+var value = numbers.get(2) 
+var value1 = numbers.indexOf(99) 
+println("ArrayList Max value = $maxValue") 
+println("ArrayList Min value = $minValue") 
+println("value = $value") 
+println("value = $value1") 
+//LinkedList 
+println("--- Linked List ---") 
+var planetsld =  LinkedList<String>() 
+planetsld.addAll(listOf("Earth", "Venus", "Mars")) 
+println("Planets = $planetsld") 
+println("First planet = " + planetsld.first) 
+println("Last planet = " + planetsld.last) 
+planetsld.addLast("Pluto") 
+println("planets = $planetsld") 
+planetsld.removeFirst() 
+println("Planets Remove First = $planetsld") 
+planetsld.removeLast() 
+println("Planets Remove Last= $planetsld") 
+println(planetsld) 
+planetsld.clear() 
+if(planetsld.isEmpty()) 
+println("Planets list is empty!") 
+else 
+println("Planets list is NOT Empty!") 
+} 
+
+Output:
+
+--- List ---
+3
+Mercury
+Venus
+Earth
+--- ArrayList Data ---
+Pluto is a Planet!
+[Mercury, Venus, Earth, Pluto]
+ArrayList Max value = 99
+ArrayList Min value = 21
+value = 99
+value = 2
+--- Linked List ---
+Planets = [Earth, Venus, Mars]
+First planet = Earth
+Last planet = Mars
+planets = [Earth, Venus, Mars, Pluto]
+Planets Remove First = [Venus, Mars, Pluto]
+Planets Remove Last= [Venus, Mars]
+[Venus, Mars]
+Planets list is empty!

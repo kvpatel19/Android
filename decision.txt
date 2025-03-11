@@ -1,0 +1,48 @@
+ 
+fun main(args: Array<String>) { 
+      println("-------------------If Statement----------------") 
+       var accountBalance : Int =0 
+       if(accountBalance < 10000) 
+           println("Close Account!") 
+ 
+      println("-------------------If Then Else Statement----------------") 
+       var age=10 
+        if(age>18) 
+            println("Adult") 
+        else 
+            println("Minor") 
+ 
+       println("-------------------If Then Else If Else Statement----------------") 
+        accountBalance = 1000001 
+        if (accountBalance < 1000) 
+            println("Close Account!") 
+        else if (accountBalance > 1000000) 
+            println("Your account balance is High") 
+        else 
+            println("We love having you with us!") 
+ 
+       println("-------------Nested If Statement----------------") 
+       accountBalance = 501 
+       if (accountBalance < 1000) 
+       { 
+           if(accountBalance < 500) 
+               println("Close Account!") 
+           else 
+               println("You better maintain a minimum balance.") 
+       } 
+else if (accountBalance > 1000000) 
+println("Please find a Europe tour cruise package in your mailbox!") 
+else 
+println("We love having you with us!") 
+println("-------------When Statement----------------") 
+var x: Int = 1 
+when(x) 
+{ 
+1 -> println("x is one") 
+2 -> println("x is two") 
+else -> 
+{ 
+println("x is not good") 
+} 
+} 
+} 

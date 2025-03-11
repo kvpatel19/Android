@@ -1,0 +1,74 @@
+import java.util.TreeMap 
+fun main(args: Array<String>) { 
+var alphabetMap = mutableMapOf("A" to "Apple", "B" to "Ball","C" to "Cat") 
+println(alphabetMap) 
+for((alphabet,word) in alphabetMap) 
+{ 
+println("$alphabet for $word") 
+} 
+//HashMap 
+var planetshmap =  hashMapOf<Int, String>( 1 to "Earth", 2 to "Mars", 3 to "Jupiter") 
+planetshmap[4] = "Pluto" 
+for(key in planetshmap.keys) 
+{ 
+println(key.toString() + " = " + planetshmap.get(key)) 
+} 
+//LinkedHashMap 
+var planetslhmap =  LinkedHashMap<Int, String>() 
+planetslhmap[1] = "Earth" 
+planetslhmap[2] = "Mars" 
+planetslhmap[3] = "Pluto" 
+for(key in planetslhmap.keys) 
+{ 
+println(key.toString() + " = " + planetslhmap[key]) 
+} 
+planetslhmap[2] = "Jupiter" 
+println("\nAfter replacing") 
+for(key in planetslhmap.keys) 
+{ 
+println(key.toString() + " = " + planetslhmap[key]) 
+} 
+var planets1 =  LinkedHashMap<String, String>() 
+planets1["Earth"] = "Blue marble. Has Water. Brimming with life!"; 
+planets1["Mars"] = "Red Planet. Barren. Has no life."; 
+planets1["Pluto"] = "It is not a Planet. It is actually a space station for Aliens." 
+var planetsValues = planets1.values 
+for(value in planetsValues) 
+{ 
+println("Planet Description = $value") 
+} 
+//TreeMap 
+var planetstmap = TreeMap<Int, String>() 
+planetstmap[1] = "Earth" 
+planetstmap[2] = "Mars" 
+planetstmap[3] = "Pluto" 
+for(key in planetstmap.keys) 
+{ 
+println(key.toString() + " = " + planetstmap[key]) 
+} 
+} 
+
+Output:
+
+{A=Apple, B=Ball, C=Cat}
+A for Apple
+B for Ball
+C for Cat
+1 = Earth
+2 = Mars
+3 = Jupiter
+4 = Pluto
+1 = Earth
+2 = Mars
+3 = Pluto
+
+After replacing
+1 = Earth
+2 = Jupiter
+3 = Pluto
+Planet Description = Blue marble. Has Water. Brimming with life!
+Planet Description = Red Planet. Barren. Has no life.
+Planet Description = It is not a Planet. It is actually a space station for Aliens.
+1 = Earth
+2 = Mars
+3 = Pluto

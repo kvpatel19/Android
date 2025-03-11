@@ -1,0 +1,19 @@
+fun main(args: Array<String>) { 
+// Create an object of MyChildClass and call myFunction 
+val myObj = MyChildClass() 
+myObj.myFunction() 
+} 
+// Superclass 
+open class MyParentClass { 
+val data = "Inheritance Demo" 
+} 
+// Subclass 
+class MyChildClass: MyParentClass() { 
+fun myFunction() { 
+println(data) // x is now inherited from the superclass 
+} 
+}
+
+Output:
+
+Inheritance Demo
